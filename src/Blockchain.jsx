@@ -50,7 +50,7 @@ const getEthereumContract= async () =>{
         const networkId=await web3.eth.net.getId()
         const networkData=await abi.networks[networkId]
         if(networkData){
-            const contract= new web3.eth.Contract(abi.abi,networkData.address)
+            const contract= new web3.eth.Contract(abi.abi,"0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0")
             return contract
         }else{
             return null
